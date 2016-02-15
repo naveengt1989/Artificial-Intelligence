@@ -1,0 +1,39 @@
+
+Goal: Solve sample propositional logic problems using prolog.
+
+Compilation(inside swipl):
+	consult('assgn.pl'). 
+
+Execution(problems):
+	# Problem 1:
+	intersection(<INPUT_LIST_1>, <INPUT_LIST_2>, <OUTPUT_LIST>).  
+	Output: Intersection List(V) 
+
+	Example: intersection([1,2,3,4,5,6], [2,4,6,8], V).
+	
+	# Problem 2:
+	good_meal(<INPUT_LIST>,<OUTPUT_CALORIES>).
+	Output: If list is a good meal, outputs total calories else false.
+	Example:
+	good_meal([hamburger, banana, salad, water],CALORIES).
+	
+	good_meal_non_vegetarian(<INPUT_LIST>,<OUTPUT_CALORIES>).
+	Output: If list is a good non-vegetarian meal, outputs total calories else false.
+	Example:
+	good_meal_non_vegetarian([hamburger, banana, salad, water],CALORIES).
+
+	good_meal_vegetarian(<INPUT_LIST>,<OUTPUT_CALORIES>).
+	Output: If list is a good vegetarian meal(no non-vegetarian item), outputs total calories else false.
+	Example:
+	good_meal_vegetarian([salad, banana, water, apple_pie, beans, milk, orange_juice, carrot],CALORIES).
+
+	# Problem 3:
+	sqrt(<NUMBER>, <OUTPUT_LIST>).
+	Output: Square root of number. Precision is set as 0.0001
+	Example:
+	sqrt(10, X).
+	
+	# Problem 4:
+	queens(A,B,C,D,E).
+	Output: Prints combinations of variables(10 solutions) which satisfy the 5-queens problem.
+

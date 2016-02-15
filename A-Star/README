@@ -1,0 +1,16 @@
+
+Goal: Implement A* heuristics to solve Blocksworld problems. 
+
+Compilation:
+	g++ astarBlocksGame.cpp <FLAGS>
+	Compilation Flags:
+	-DDEBUG		-	Detailed prints	
+Execution:
+	./a.out <NUMBER OF STACKS> <NUMBER OF BLOCKS>
+	Example:
+	./a.out 5 8 
+
+	On input, problem generator generates a random initial state with specified number of blocks, stacks.
+	Output:
+	Solution path of each the blocks game, i.e. each state from initial state to goal state and summary statistics(number of iterations, maximum queue size, path length) are printed. 
+

@@ -1,0 +1,33 @@
+
+Goal: Implement Davis–Putnam–Logemann–Loveland (DPLL) algorithm and apply to solve given boolean satisfiability problem. 
+
+Compilation:
+	g++ <FLAGS> dpll.cpp 
+	Compilation Flags:
+	-DDEBUG		-	Run algorithm with additional prints with regard to cells being considered for next move.
+	Example: g++  -DDEBUG dpll.cpp 
+
+Execution:
+	./a.out <FILE_NAME>  
+	Example: ./a.out input.txt
+
+	Note:
+	* For the problem(chicken-farmer-fox-grain), propositional logic(in CNF form) is given in file: input.txt(included in directory).
+	* Propositional logic in CNF form is read from the input file given as argument.	
+	* Format of input file: AX B -C  ==> AX  v B  v -C
+	* Lines beginning with # are considered as comments.
+	* Propositional logic Notation:
+	  - denoted complement
+	  Object_Positions => T<TimeSlot>_<Object>_<Position> where,
+		TimeSlot = Varies from 0 to upper bound(7 in this case)
+		Object = Can have values Fa=>Farmer, Ch=>Chicken, Gr=>Grain, Fx=>Fox.
+		Position = L=>Left, R=>Right
+		Example: T2_Fx_L => At time slot 2, fox is on the left side of the river. 	
+	  Moves => T<TimeSlot>_mv_<Object>_<Direction>
+		TimeSlot = Varies from 0 to upper bound(7 in this case)
+		Object = Can have values No=>Farmer Alone, Ch=>Farmer+Chicken, Gr=>Farmer+Grain, Fx=>Farmer+Fox.
+		Direction = LR=>Left To Right, RL=>Right To Left
+		Example: T2_mv_Fx_LR => At time slot 2, fox and farmer crosses river from Left To Right. 	
+	Output:
+	In case of success, result(SUCCESS/FAILURE), values for each proposition and the ones which evaluate to true are printed.
+	If program has been compiled with -DDEBUG flag detailed prints with respect to resolution of propositional logic is also printed. 

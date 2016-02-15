@@ -1,0 +1,23 @@
+
+Goal: Solve Sammy's Sport Shop in propositional logic using resolution refutation. 
+
+Compilation:
+	g++ <FLAGS> sammy.cpp 
+	Compilation Flags:
+	-DDEBUG		-	Run algorithm with additional prints with regard to cells being considered for next move.
+	Example: g++  -DDEBUG sammy.cpp 
+
+Execution:
+	./a.out <FILE_NAME>  
+	Example: ./a.out input.txt
+
+	Note:
+	* File given as argument should contain Propositional logic in CNF form.
+	* Format of input file: AX B -C  ==> AX  v B  v -C
+	* Lines beginning with # are considered as comments.
+	* For the problem Sammy's Sport Shop, propositional logic(in CNF form) is given in file: input.txt(included in directory).	
+	
+	
+	Output:
+	In case of success, path trace and result(SUCCESS/FAILURE) is printed. If program has been compiled with 
+	-DDEBUG flag detailed prints with respect to resolution of propositional logic is also printed. 

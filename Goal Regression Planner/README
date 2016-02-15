@@ -1,0 +1,51 @@
+
+Goal: Implement goal regression algorithm for doing planning in the Blocksworld. 
+
+Compilation & Execution:
+	Generate Operators:
+		g++ genOperators.cpp
+		./a.out > blocksworld.opers  
+
+	Run Goal regression algorithm:
+		g++ goalRegress.cpp
+		Compilation Flags:
+		-DDEBUG		-	Run algorithm with additional prints.
+
+		./a.out blocksworld.opers init.kb
+		On the prompt shown, goals to be achieved are entered separated by spaces.
+
+	Output:
+	Solution plan for problem is printed in-order of execution. Additional traces are also provided.
+	
+	Problem Solutions:
+	on(a,c)
+	PLAN:
+		pickup(a,b)
+		puton(a,c)
+	on(b,a) 
+	PLAN:
+		pickup(a,b)
+		puton(a,c)
+		pickup(b,table)
+		puton(b,a)
+	on(a,c) holding(b)
+	PLAN:
+		pickup(a,b)
+		puton(a,c)
+		pickup(b,table)
+	on(a,d)
+	PLAN:
+		pickup(c,d)
+		puton(c,table)
+		pickup(a,b)
+		puton(a,d)
+	on(a,d) on(d,b)
+	PLAN:
+		pickup(a,b)
+		puton(a,table)
+		pickup(c,d)
+		puton(c,table)
+		pickup(d,table)
+		puton(d,b)
+		pickup(a,table)
+		puton(a,d)

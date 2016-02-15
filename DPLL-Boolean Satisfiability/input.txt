@@ -1,0 +1,707 @@
+# init
+T0_Fa_L
+T0_Ch_L
+T0_Fx_L
+T0_Gr_L
+
+# Negation logic(T0)
+-T0_Fa_L -T0_Fa_R
+T0_Fa_L T0_Fa_R
+-T0_Fx_L -T0_Fx_R
+T0_Fx_L T0_Fx_R
+-T0_Ch_L -T0_Ch_R
+T0_Ch_L T0_Ch_R
+-T0_Gr_L -T0_Gr_R
+T0_Gr_L T0_Gr_R
+
+#Game Rule Logic
+-T0_Gr_L -T0_Ch_L T0_Fa_L
+-T0_Gr_R -T0_Ch_R T0_Fa_R
+-T0_Ch_L -T0_Fx_L T0_Fa_L
+-T0_Ch_R -T0_Fx_R T0_Fa_R
+
+# Moves logic(T0)
+-T0_mv_No_LR T0_Fa_L
+-T0_mv_No_LR -T0_mv_Fx_LR
+-T0_mv_No_LR -T0_mv_Ch_LR
+-T0_mv_No_LR -T0_mv_Gr_LR
+-T0_mv_No_LR T1_Fa_R
+
+
+-T0_mv_Gr_LR T0_Gr_L
+-T0_mv_Gr_LR T0_Fa_L
+-T0_mv_Gr_LR -T0_mv_No_LR
+-T0_mv_Gr_LR -T0_mv_Ch_LR
+-T0_mv_Gr_LR -T0_mv_Fx_LR
+-T0_mv_Gr_LR T1_Gr_R
+-T0_mv_Gr_LR T1_Fa_R
+
+
+-T0_mv_Ch_LR T0_Ch_L
+-T0_mv_Ch_LR T0_Fa_L
+-T0_mv_Ch_LR -T0_mv_No_LR
+-T0_mv_Ch_LR -T0_mv_Gr_LR
+-T0_mv_Ch_LR -T0_mv_Fx_LR
+-T0_mv_Ch_LR T1_Ch_R
+-T0_mv_Ch_LR T1_Fa_R
+
+
+-T0_mv_Fx_LR T0_Fx_L
+-T0_mv_Fx_LR T0_Fa_L
+-T0_mv_Fx_LR -T0_mv_Gr_LR
+-T0_mv_Fx_LR -T0_mv_Ch_LR
+-T0_mv_Fx_LR -T0_mv_No_LR
+-T0_mv_Fx_LR T1_Fx_R
+-T0_mv_Fx_LR T1_Fa_R
+
+-T0_mv_No_RL T0_Fa_R
+-T0_mv_No_RL -T0_mv_Fx_RL
+-T0_mv_No_RL -T0_mv_Ch_RL
+-T0_mv_No_RL -T0_mv_Gr_RL
+-T0_mv_No_RL T1_Fa_L
+
+
+-T0_mv_Gr_RL T0_Gr_R
+-T0_mv_Gr_RL T0_Fa_R
+-T0_mv_Gr_RL -T0_mv_No_RL
+-T0_mv_Gr_RL -T0_mv_Ch_RL
+-T0_mv_Gr_RL -T0_mv_Fx_RL
+-T0_mv_Gr_RL T1_Gr_L
+-T0_mv_Gr_RL T1_Fa_L
+
+
+-T0_mv_Ch_RL T0_Ch_R
+-T0_mv_Ch_RL T0_Fa_R
+-T0_mv_Ch_RL -T0_mv_No_RL
+-T0_mv_Ch_RL -T0_mv_Gr_RL
+-T0_mv_Ch_RL -T0_mv_Fx_RL
+-T0_mv_Ch_RL T1_Ch_L
+-T0_mv_Ch_RL T1_Fa_L
+
+
+-T0_mv_Fx_RL T0_Fx_R
+-T0_mv_Fx_RL T0_Fa_R
+-T0_mv_Fx_RL -T0_mv_Gr_RL
+-T0_mv_Fx_RL -T0_mv_Ch_RL
+-T0_mv_Fx_RL -T0_mv_No_RL
+-T0_mv_Fx_RL T1_Fx_L
+-T0_mv_Fx_RL T1_Fa_L
+
+-T0_Fx_L  T1_Fx_L  T0_mv_Fx_LR
+-T0_Fx_R  T1_Fx_R  T0_mv_Fx_RL
+-T0_Ch_L  T1_Ch_L  T0_mv_Ch_LR
+-T0_Ch_R  T1_Ch_R  T0_mv_Ch_RL
+-T0_Gr_L  T1_Gr_L  T0_mv_Gr_LR
+-T0_Gr_R  T1_Gr_R  T0_mv_Gr_RL
+
+# Move Every Time slot(T0)
+-T0_Fa_L T0_mv_Fx_LR T0_mv_Ch_LR T0_mv_Gr_LR T0_mv_No_LR
+-T0_Fa_R T0_mv_Fx_RL T0_mv_Ch_RL T0_mv_Gr_RL T0_mv_No_RL T0_Fx_R
+-T0_Fa_R T0_mv_Fx_RL T0_mv_Ch_RL T0_mv_Gr_RL T0_mv_No_RL T0_Ch_R
+-T0_Fa_R T0_mv_Fx_RL T0_mv_Ch_RL T0_mv_Gr_RL T0_mv_No_RL T0_Gr_R
+
+
+# Negation logic(T1)
+-T1_Fa_L -T1_Fa_R
+T1_Fa_L T1_Fa_R
+-T1_Fx_L -T1_Fx_R
+T1_Fx_L T1_Fx_R
+-T1_Ch_L -T1_Ch_R
+T1_Ch_L T1_Ch_R
+-T1_Gr_L -T1_Gr_R
+T1_Gr_L T1_Gr_R
+
+#Game Rule Logic
+-T1_Gr_L -T1_Ch_L T1_Fa_L
+-T1_Gr_R -T1_Ch_R T1_Fa_R
+-T1_Ch_L -T1_Fx_L T1_Fa_L
+-T1_Ch_R -T1_Fx_R T1_Fa_R
+
+# Moves logic(T1)
+-T1_mv_No_LR T1_Fa_L
+-T1_mv_No_LR -T1_mv_Fx_LR
+-T1_mv_No_LR -T1_mv_Ch_LR
+-T1_mv_No_LR -T1_mv_Gr_LR
+-T1_mv_No_LR T2_Fa_R
+
+
+-T1_mv_Gr_LR T1_Gr_L
+-T1_mv_Gr_LR T1_Fa_L
+-T1_mv_Gr_LR -T1_mv_No_LR
+-T1_mv_Gr_LR -T1_mv_Ch_LR
+-T1_mv_Gr_LR -T1_mv_Fx_LR
+-T1_mv_Gr_LR T2_Gr_R
+-T1_mv_Gr_LR T2_Fa_R
+
+
+-T1_mv_Ch_LR T1_Ch_L
+-T1_mv_Ch_LR T1_Fa_L
+-T1_mv_Ch_LR -T1_mv_No_LR
+-T1_mv_Ch_LR -T1_mv_Gr_LR
+-T1_mv_Ch_LR -T1_mv_Fx_LR
+-T1_mv_Ch_LR T2_Ch_R
+-T1_mv_Ch_LR T2_Fa_R
+
+
+-T1_mv_Fx_LR T1_Fx_L
+-T1_mv_Fx_LR T1_Fa_L
+-T1_mv_Fx_LR -T1_mv_Gr_LR
+-T1_mv_Fx_LR -T1_mv_Ch_LR
+-T1_mv_Fx_LR -T1_mv_No_LR
+-T1_mv_Fx_LR T2_Fx_R
+-T1_mv_Fx_LR T2_Fa_R
+
+-T1_mv_No_RL T1_Fa_R
+-T1_mv_No_RL -T1_mv_Fx_RL
+-T1_mv_No_RL -T1_mv_Ch_RL
+-T1_mv_No_RL -T1_mv_Gr_RL
+-T1_mv_No_RL T2_Fa_L
+
+
+-T1_mv_Gr_RL T1_Gr_R
+-T1_mv_Gr_RL T1_Fa_R
+-T1_mv_Gr_RL -T1_mv_No_RL
+-T1_mv_Gr_RL -T1_mv_Ch_RL
+-T1_mv_Gr_RL -T1_mv_Fx_RL
+-T1_mv_Gr_RL T2_Gr_L
+-T1_mv_Gr_RL T2_Fa_L
+
+
+-T1_mv_Ch_RL T1_Ch_R
+-T1_mv_Ch_RL T1_Fa_R
+-T1_mv_Ch_RL -T1_mv_No_RL
+-T1_mv_Ch_RL -T1_mv_Gr_RL
+-T1_mv_Ch_RL -T1_mv_Fx_RL
+-T1_mv_Ch_RL T2_Ch_L
+-T1_mv_Ch_RL T2_Fa_L
+
+
+-T1_mv_Fx_RL T1_Fx_R
+-T1_mv_Fx_RL T1_Fa_R
+-T1_mv_Fx_RL -T1_mv_Gr_RL
+-T1_mv_Fx_RL -T1_mv_Ch_RL
+-T1_mv_Fx_RL -T1_mv_No_RL
+-T1_mv_Fx_RL T2_Fx_L
+-T1_mv_Fx_RL T2_Fa_L
+
+-T1_Fx_L  T2_Fx_L  T1_mv_Fx_LR
+-T1_Fx_R  T2_Fx_R  T1_mv_Fx_RL
+-T1_Ch_L  T2_Ch_L  T1_mv_Ch_LR
+-T1_Ch_R  T2_Ch_R  T1_mv_Ch_RL
+-T1_Gr_L  T2_Gr_L  T1_mv_Gr_LR
+-T1_Gr_R  T2_Gr_R  T1_mv_Gr_RL
+
+# Move Every Time slot(T1)
+-T1_Fa_L T1_mv_Fx_LR T1_mv_Ch_LR T1_mv_Gr_LR T1_mv_No_LR
+-T1_Fa_R T1_mv_Fx_RL T1_mv_Ch_RL T1_mv_Gr_RL T1_mv_No_RL T1_Fx_R
+-T1_Fa_R T1_mv_Fx_RL T1_mv_Ch_RL T1_mv_Gr_RL T1_mv_No_RL T1_Ch_R
+-T1_Fa_R T1_mv_Fx_RL T1_mv_Ch_RL T1_mv_Gr_RL T1_mv_No_RL T1_Gr_R
+
+
+# Negation logic(T2)
+-T2_Fa_L -T2_Fa_R
+T2_Fa_L T2_Fa_R
+-T2_Fx_L -T2_Fx_R
+T2_Fx_L T2_Fx_R
+-T2_Ch_L -T2_Ch_R
+T2_Ch_L T2_Ch_R
+-T2_Gr_L -T2_Gr_R
+T2_Gr_L T2_Gr_R
+
+#Game Rule Logic
+-T2_Gr_L -T2_Ch_L T2_Fa_L
+-T2_Gr_R -T2_Ch_R T2_Fa_R
+-T2_Ch_L -T2_Fx_L T2_Fa_L
+-T2_Ch_R -T2_Fx_R T2_Fa_R
+
+# Moves logic(T2)
+-T2_mv_No_LR T2_Fa_L
+-T2_mv_No_LR -T2_mv_Fx_LR
+-T2_mv_No_LR -T2_mv_Ch_LR
+-T2_mv_No_LR -T2_mv_Gr_LR
+-T2_mv_No_LR T3_Fa_R
+
+
+-T2_mv_Gr_LR T2_Gr_L
+-T2_mv_Gr_LR T2_Fa_L
+-T2_mv_Gr_LR -T2_mv_No_LR
+-T2_mv_Gr_LR -T2_mv_Ch_LR
+-T2_mv_Gr_LR -T2_mv_Fx_LR
+-T2_mv_Gr_LR T3_Gr_R
+-T2_mv_Gr_LR T3_Fa_R
+
+
+-T2_mv_Ch_LR T2_Ch_L
+-T2_mv_Ch_LR T2_Fa_L
+-T2_mv_Ch_LR -T2_mv_No_LR
+-T2_mv_Ch_LR -T2_mv_Gr_LR
+-T2_mv_Ch_LR -T2_mv_Fx_LR
+-T2_mv_Ch_LR T3_Ch_R
+-T2_mv_Ch_LR T3_Fa_R
+
+
+-T2_mv_Fx_LR T2_Fx_L
+-T2_mv_Fx_LR T2_Fa_L
+-T2_mv_Fx_LR -T2_mv_Gr_LR
+-T2_mv_Fx_LR -T2_mv_Ch_LR
+-T2_mv_Fx_LR -T2_mv_No_LR
+-T2_mv_Fx_LR T3_Fx_R
+-T2_mv_Fx_LR T3_Fa_R
+
+-T2_mv_No_RL T2_Fa_R
+-T2_mv_No_RL -T2_mv_Fx_RL
+-T2_mv_No_RL -T2_mv_Ch_RL
+-T2_mv_No_RL -T2_mv_Gr_RL
+-T2_mv_No_RL T3_Fa_L
+
+
+-T2_mv_Gr_RL T2_Gr_R
+-T2_mv_Gr_RL T2_Fa_R
+-T2_mv_Gr_RL -T2_mv_No_RL
+-T2_mv_Gr_RL -T2_mv_Ch_RL
+-T2_mv_Gr_RL -T2_mv_Fx_RL
+-T2_mv_Gr_RL T3_Gr_L
+-T2_mv_Gr_RL T3_Fa_L
+
+
+-T2_mv_Ch_RL T2_Ch_R
+-T2_mv_Ch_RL T2_Fa_R
+-T2_mv_Ch_RL -T2_mv_No_RL
+-T2_mv_Ch_RL -T2_mv_Gr_RL
+-T2_mv_Ch_RL -T2_mv_Fx_RL
+-T2_mv_Ch_RL T3_Ch_L
+-T2_mv_Ch_RL T3_Fa_L
+
+
+-T2_mv_Fx_RL T2_Fx_R
+-T2_mv_Fx_RL T2_Fa_R
+-T2_mv_Fx_RL -T2_mv_Gr_RL
+-T2_mv_Fx_RL -T2_mv_Ch_RL
+-T2_mv_Fx_RL -T2_mv_No_RL
+-T2_mv_Fx_RL T3_Fx_L
+-T2_mv_Fx_RL T3_Fa_L
+
+-T2_Fx_L  T3_Fx_L  T2_mv_Fx_LR
+-T2_Fx_R  T3_Fx_R  T2_mv_Fx_RL
+-T2_Ch_L  T3_Ch_L  T2_mv_Ch_LR
+-T2_Ch_R  T3_Ch_R  T2_mv_Ch_RL
+-T2_Gr_L  T3_Gr_L  T2_mv_Gr_LR
+-T2_Gr_R  T3_Gr_R  T2_mv_Gr_RL
+
+
+# Move Every Time slot(T2)
+-T2_Fa_L T2_mv_Fx_LR T2_mv_Ch_LR T2_mv_Gr_LR T2_mv_No_LR
+-T2_Fa_R T2_mv_Fx_RL T2_mv_Ch_RL T2_mv_Gr_RL T2_mv_No_RL T2_Fx_R
+-T2_Fa_R T2_mv_Fx_RL T2_mv_Ch_RL T2_mv_Gr_RL T2_mv_No_RL T2_Ch_R
+-T2_Fa_R T2_mv_Fx_RL T2_mv_Ch_RL T2_mv_Gr_RL T2_mv_No_RL T2_Gr_R
+
+# Negation logic(T3)
+-T3_Fa_L -T3_Fa_R
+T3_Fa_L T3_Fa_R
+-T3_Fx_L -T3_Fx_R
+T3_Fx_L T3_Fx_R
+-T3_Ch_L -T3_Ch_R
+T3_Ch_L T3_Ch_R
+-T3_Gr_L -T3_Gr_R
+T3_Gr_L T3_Gr_R
+
+#Game Rule Logic
+-T3_Gr_L -T3_Ch_L T3_Fa_L
+-T3_Gr_R -T3_Ch_R T3_Fa_R
+-T3_Ch_L -T3_Fx_L T3_Fa_L
+-T3_Ch_R -T3_Fx_R T3_Fa_R
+
+# Moves logic(T3)
+-T3_mv_No_LR T3_Fa_L
+-T3_mv_No_LR -T3_mv_Fx_LR
+-T3_mv_No_LR -T3_mv_Ch_LR
+-T3_mv_No_LR -T3_mv_Gr_LR
+-T3_mv_No_LR T4_Fa_R
+
+
+-T3_mv_Gr_LR T3_Gr_L
+-T3_mv_Gr_LR T3_Fa_L
+-T3_mv_Gr_LR -T3_mv_No_LR
+-T3_mv_Gr_LR -T3_mv_Ch_LR
+-T3_mv_Gr_LR -T3_mv_Fx_LR
+-T3_mv_Gr_LR T4_Gr_R
+-T3_mv_Gr_LR T4_Fa_R
+
+
+-T3_mv_Ch_LR T3_Ch_L
+-T3_mv_Ch_LR T3_Fa_L
+-T3_mv_Ch_LR -T3_mv_No_LR
+-T3_mv_Ch_LR -T3_mv_Gr_LR
+-T3_mv_Ch_LR -T3_mv_Fx_LR
+-T3_mv_Ch_LR T4_Ch_R
+-T3_mv_Ch_LR T4_Fa_R
+
+
+-T3_mv_Fx_LR T3_Fx_L
+-T3_mv_Fx_LR T3_Fa_L
+-T3_mv_Fx_LR -T3_mv_Gr_LR
+-T3_mv_Fx_LR -T3_mv_Ch_LR
+-T3_mv_Fx_LR -T3_mv_No_LR
+-T3_mv_Fx_LR T4_Fx_R
+-T3_mv_Fx_LR T4_Fa_R
+
+-T3_mv_No_RL T3_Fa_R
+-T3_mv_No_RL -T3_mv_Fx_RL
+-T3_mv_No_RL -T3_mv_Ch_RL
+-T3_mv_No_RL -T3_mv_Gr_RL
+-T3_mv_No_RL T4_Fa_L
+
+
+-T3_mv_Gr_RL T3_Gr_R
+-T3_mv_Gr_RL T3_Fa_R
+-T3_mv_Gr_RL -T3_mv_No_RL
+-T3_mv_Gr_RL -T3_mv_Ch_RL
+-T3_mv_Gr_RL -T3_mv_Fx_RL
+-T3_mv_Gr_RL T4_Gr_L
+-T3_mv_Gr_RL T4_Fa_L
+
+
+-T3_mv_Ch_RL T3_Ch_R
+-T3_mv_Ch_RL T3_Fa_R
+-T3_mv_Ch_RL -T3_mv_No_RL
+-T3_mv_Ch_RL -T3_mv_Gr_RL
+-T3_mv_Ch_RL -T3_mv_Fx_RL
+-T3_mv_Ch_RL T4_Ch_L
+-T3_mv_Ch_RL T4_Fa_L
+
+
+-T3_mv_Fx_RL T3_Fx_R
+-T3_mv_Fx_RL T3_Fa_R
+-T3_mv_Fx_RL -T3_mv_Gr_RL
+-T3_mv_Fx_RL -T3_mv_Ch_RL
+-T3_mv_Fx_RL -T3_mv_No_RL
+-T3_mv_Fx_RL T4_Fx_L
+-T3_mv_Fx_RL T4_Fa_L
+
+-T3_Fx_L  T4_Fx_L  T3_mv_Fx_LR
+-T3_Fx_R  T4_Fx_R  T3_mv_Fx_RL
+-T3_Ch_L  T4_Ch_L  T3_mv_Ch_LR
+-T3_Ch_R  T4_Ch_R  T3_mv_Ch_RL
+-T3_Gr_L  T4_Gr_L  T3_mv_Gr_LR
+-T3_Gr_R  T4_Gr_R  T3_mv_Gr_RL
+
+# Move Every Time slot(T3)
+-T3_Fa_L T3_mv_Fx_LR T3_mv_Ch_LR T3_mv_Gr_LR T3_mv_No_LR
+-T3_Fa_R T3_mv_Fx_RL T3_mv_Ch_RL T3_mv_Gr_RL T3_mv_No_RL T3_Fx_R
+-T3_Fa_R T3_mv_Fx_RL T3_mv_Ch_RL T3_mv_Gr_RL T3_mv_No_RL T3_Ch_R
+-T3_Fa_R T3_mv_Fx_RL T3_mv_Ch_RL T3_mv_Gr_RL T3_mv_No_RL T3_Gr_R
+
+# Negation logic(T4)
+-T4_Fa_L -T4_Fa_R
+T4_Fa_L T4_Fa_R
+-T4_Fx_L -T4_Fx_R
+T4_Fx_L T4_Fx_R
+-T4_Ch_L -T4_Ch_R
+T4_Ch_L T4_Ch_R
+-T4_Gr_L -T4_Gr_R
+T4_Gr_L T4_Gr_R
+
+#Game Rule Logic
+-T4_Gr_L -T4_Ch_L T4_Fa_L
+-T4_Gr_R -T4_Ch_R T4_Fa_R
+-T4_Ch_L -T4_Fx_L T4_Fa_L
+-T4_Ch_R -T4_Fx_R T4_Fa_R
+
+
+# Moves logic(T4)
+-T4_mv_No_LR T4_Fa_L
+-T4_mv_No_LR -T4_mv_Fx_LR
+-T4_mv_No_LR -T4_mv_Ch_LR
+-T4_mv_No_LR -T4_mv_Gr_LR
+-T4_mv_No_LR T5_Fa_R
+
+
+-T4_mv_Gr_LR T4_Gr_L
+-T4_mv_Gr_LR T4_Fa_L
+-T4_mv_Gr_LR -T4_mv_No_LR
+-T4_mv_Gr_LR -T4_mv_Ch_LR
+-T4_mv_Gr_LR -T4_mv_Fx_LR
+-T4_mv_Gr_LR T5_Gr_R
+-T4_mv_Gr_LR T5_Fa_R
+
+
+-T4_mv_Ch_LR T4_Ch_L
+-T4_mv_Ch_LR T4_Fa_L
+-T4_mv_Ch_LR -T4_mv_No_LR
+-T4_mv_Ch_LR -T4_mv_Gr_LR
+-T4_mv_Ch_LR -T4_mv_Fx_LR
+-T4_mv_Ch_LR T5_Ch_R
+-T4_mv_Ch_LR T5_Fa_R
+
+
+-T4_mv_Fx_LR T4_Fx_L
+-T4_mv_Fx_LR T4_Fa_L
+-T4_mv_Fx_LR -T4_mv_Gr_LR
+-T4_mv_Fx_LR -T4_mv_Ch_LR
+-T4_mv_Fx_LR -T4_mv_No_LR
+-T4_mv_Fx_LR T5_Fx_R
+-T4_mv_Fx_LR T5_Fa_R
+
+-T4_mv_No_RL T4_Fa_R
+-T4_mv_No_RL -T4_mv_Fx_RL
+-T4_mv_No_RL -T4_mv_Ch_RL
+-T4_mv_No_RL -T4_mv_Gr_RL
+-T4_mv_No_RL T5_Fa_L
+
+
+-T4_mv_Gr_RL T4_Gr_R
+-T4_mv_Gr_RL T4_Fa_R
+-T4_mv_Gr_RL -T4_mv_No_RL
+-T4_mv_Gr_RL -T4_mv_Ch_RL
+-T4_mv_Gr_RL -T4_mv_Fx_RL
+-T4_mv_Gr_RL T5_Gr_L
+-T4_mv_Gr_RL T5_Fa_L
+
+
+-T4_mv_Ch_RL T4_Ch_R
+-T4_mv_Ch_RL T4_Fa_R
+-T4_mv_Ch_RL -T4_mv_No_RL
+-T4_mv_Ch_RL -T4_mv_Gr_RL
+-T4_mv_Ch_RL -T4_mv_Fx_RL
+-T4_mv_Ch_RL T5_Ch_L
+-T4_mv_Ch_RL T5_Fa_L
+
+
+-T4_mv_Fx_RL T4_Fx_R
+-T4_mv_Fx_RL T4_Fa_R
+-T4_mv_Fx_RL -T4_mv_Gr_RL
+-T4_mv_Fx_RL -T4_mv_Ch_RL
+-T4_mv_Fx_RL -T4_mv_No_RL
+-T4_mv_Fx_RL T5_Fx_L
+-T4_mv_Fx_RL T5_Fa_L
+
+-T4_Fx_L  T5_Fx_L  T4_mv_Fx_LR
+-T4_Fx_R  T5_Fx_R  T4_mv_Fx_RL
+-T4_Ch_L  T5_Ch_L  T4_mv_Ch_LR
+-T4_Ch_R  T5_Ch_R  T4_mv_Ch_RL
+-T4_Gr_L  T5_Gr_L  T4_mv_Gr_LR
+-T4_Gr_R  T5_Gr_R  T4_mv_Gr_RL
+
+# Move Every Time slot(T4)
+-T4_Fa_L T4_mv_Fx_LR T4_mv_Ch_LR T4_mv_Gr_LR T4_mv_No_LR
+-T4_Fa_R T4_mv_Fx_RL T4_mv_Ch_RL T4_mv_Gr_RL T4_mv_No_RL T4_Fx_R
+-T4_Fa_R T4_mv_Fx_RL T4_mv_Ch_RL T4_mv_Gr_RL T4_mv_No_RL T4_Ch_R
+-T4_Fa_R T4_mv_Fx_RL T4_mv_Ch_RL T4_mv_Gr_RL T4_mv_No_RL T4_Gr_R
+
+# Negation logic(T5)
+-T5_Fa_L -T5_Fa_R
+T5_Fa_L T5_Fa_R
+-T5_Fx_L -T5_Fx_R
+T5_Fx_L T5_Fx_R
+-T5_Ch_L -T5_Ch_R
+T5_Ch_L T5_Ch_R
+-T5_Gr_L -T5_Gr_R
+T5_Gr_L T5_Gr_R
+
+#Game Rule Logic
+-T5_Gr_L -T5_Ch_L T5_Fa_L
+-T5_Gr_R -T5_Ch_R T5_Fa_R
+-T5_Ch_L -T5_Fx_L T5_Fa_L
+-T5_Ch_R -T5_Fx_R T5_Fa_R
+
+# Moves logic(T5)
+-T5_mv_No_LR T5_Fa_L
+-T5_mv_No_LR -T5_mv_Fx_LR
+-T5_mv_No_LR -T5_mv_Ch_LR
+-T5_mv_No_LR -T5_mv_Gr_LR
+-T5_mv_No_LR T6_Fa_R
+
+
+-T5_mv_Gr_LR T5_Gr_L
+-T5_mv_Gr_LR T5_Fa_L
+-T5_mv_Gr_LR -T5_mv_No_LR
+-T5_mv_Gr_LR -T5_mv_Ch_LR
+-T5_mv_Gr_LR -T5_mv_Fx_LR
+-T5_mv_Gr_LR T6_Gr_R
+-T5_mv_Gr_LR T6_Fa_R
+
+
+-T5_mv_Ch_LR T5_Ch_L
+-T5_mv_Ch_LR T5_Fa_L
+-T5_mv_Ch_LR -T5_mv_No_LR
+-T5_mv_Ch_LR -T5_mv_Gr_LR
+-T5_mv_Ch_LR -T5_mv_Fx_LR
+-T5_mv_Ch_LR T6_Ch_R
+-T5_mv_Ch_LR T6_Fa_R
+
+
+-T5_mv_Fx_LR T5_Fx_L
+-T5_mv_Fx_LR T5_Fa_L
+-T5_mv_Fx_LR -T5_mv_Gr_LR
+-T5_mv_Fx_LR -T5_mv_Ch_LR
+-T5_mv_Fx_LR -T5_mv_No_LR
+-T5_mv_Fx_LR T6_Fx_R
+-T5_mv_Fx_LR T6_Fa_R
+
+-T5_mv_No_RL T5_Fa_R
+-T5_mv_No_RL -T5_mv_Fx_RL
+-T5_mv_No_RL -T5_mv_Ch_RL
+-T5_mv_No_RL -T5_mv_Gr_RL
+-T5_mv_No_RL T6_Fa_L
+
+
+-T5_mv_Gr_RL T5_Gr_R
+-T5_mv_Gr_RL T5_Fa_R
+-T5_mv_Gr_RL -T5_mv_No_RL
+-T5_mv_Gr_RL -T5_mv_Ch_RL
+-T5_mv_Gr_RL -T5_mv_Fx_RL
+-T5_mv_Gr_RL T6_Gr_L
+-T5_mv_Gr_RL T6_Fa_L
+
+
+-T5_mv_Ch_RL T5_Ch_R
+-T5_mv_Ch_RL T5_Fa_R
+-T5_mv_Ch_RL -T5_mv_No_RL
+-T5_mv_Ch_RL -T5_mv_Gr_RL
+-T5_mv_Ch_RL -T5_mv_Fx_RL
+-T5_mv_Ch_RL T6_Ch_L
+-T5_mv_Ch_RL T6_Fa_L
+
+
+-T5_mv_Fx_RL T5_Fx_R
+-T5_mv_Fx_RL T5_Fa_R
+-T5_mv_Fx_RL -T5_mv_Gr_RL
+-T5_mv_Fx_RL -T5_mv_Ch_RL
+-T5_mv_Fx_RL -T5_mv_No_RL
+-T5_mv_Fx_RL T6_Fx_L
+-T5_mv_Fx_RL T6_Fa_L
+
+-T5_Fx_L  T6_Fx_L  T5_mv_Fx_LR
+-T5_Fx_R  T6_Fx_R  T5_mv_Fx_RL
+-T5_Ch_L  T6_Ch_L  T5_mv_Ch_LR
+-T5_Ch_R  T6_Ch_R  T5_mv_Ch_RL
+-T5_Gr_L  T6_Gr_L  T5_mv_Gr_LR
+-T5_Gr_R  T6_Gr_R  T5_mv_Gr_RL
+
+
+# Move Every Time slot(T5)
+-T5_Fa_L T5_mv_Fx_LR T5_mv_Ch_LR T5_mv_Gr_LR T5_mv_No_LR
+-T5_Fa_R T5_mv_Fx_RL T5_mv_Ch_RL T5_mv_Gr_RL T5_mv_No_RL T5_Fx_R
+-T5_Fa_R T5_mv_Fx_RL T5_mv_Ch_RL T5_mv_Gr_RL T5_mv_No_RL T5_Ch_R
+-T5_Fa_R T5_mv_Fx_RL T5_mv_Ch_RL T5_mv_Gr_RL T5_mv_No_RL T5_Gr_R
+
+# Negation logic(T6)
+-T6_Fa_L -T6_Fa_R
+T6_Fa_L T6_Fa_R
+-T6_Fx_L -T6_Fx_R
+T6_Fx_L T6_Fx_R
+-T6_Ch_L -T6_Ch_R
+T6_Ch_L T6_Ch_R
+-T6_Gr_L -T6_Gr_R
+T6_Gr_L T6_Gr_R
+
+#Game Rule Logic
+-T6_Gr_L -T6_Ch_L T6_Fa_L
+-T6_Gr_R -T6_Ch_R T6_Fa_R
+-T6_Ch_L -T6_Fx_L T6_Fa_L
+-T6_Ch_R -T6_Fx_R T6_Fa_R
+
+# Moves logic(T6)
+-T6_mv_No_LR T6_Fa_L
+-T6_mv_No_LR -T6_mv_Fx_LR
+-T6_mv_No_LR -T6_mv_Ch_LR
+-T6_mv_No_LR -T6_mv_Gr_LR
+-T6_mv_No_LR T7_Fa_R
+
+
+-T6_mv_Gr_LR T6_Gr_L
+-T6_mv_Gr_LR T6_Fa_L
+-T6_mv_Gr_LR -T6_mv_No_LR
+-T6_mv_Gr_LR -T6_mv_Ch_LR
+-T6_mv_Gr_LR -T6_mv_Fx_LR
+-T6_mv_Gr_LR T7_Gr_R
+-T6_mv_Gr_LR T7_Fa_R
+
+
+-T6_mv_Ch_LR T6_Ch_L
+-T6_mv_Ch_LR T6_Fa_L
+-T6_mv_Ch_LR -T6_mv_No_LR
+-T6_mv_Ch_LR -T6_mv_Gr_LR
+-T6_mv_Ch_LR -T6_mv_Fx_LR
+-T6_mv_Ch_LR T7_Ch_R
+-T6_mv_Ch_LR T7_Fa_R
+
+
+-T6_mv_Fx_LR T6_Fx_L
+-T6_mv_Fx_LR T6_Fa_L
+-T6_mv_Fx_LR -T6_mv_Gr_LR
+-T6_mv_Fx_LR -T6_mv_Ch_LR
+-T6_mv_Fx_LR -T6_mv_No_LR
+-T6_mv_Fx_LR T7_Fx_R
+-T6_mv_Fx_LR T7_Fa_R
+
+-T6_mv_No_RL T6_Fa_R
+-T6_mv_No_RL -T6_mv_Fx_RL
+-T6_mv_No_RL -T6_mv_Ch_RL
+-T6_mv_No_RL -T6_mv_Gr_RL
+-T6_mv_No_RL T7_Fa_L
+
+
+-T6_mv_Gr_RL T6_Gr_R
+-T6_mv_Gr_RL T6_Fa_R
+-T6_mv_Gr_RL -T6_mv_No_RL
+-T6_mv_Gr_RL -T6_mv_Ch_RL
+-T6_mv_Gr_RL -T6_mv_Fx_RL
+-T6_mv_Gr_RL T7_Gr_L
+-T6_mv_Gr_RL T7_Fa_L
+
+
+-T6_mv_Ch_RL T6_Ch_R
+-T6_mv_Ch_RL T6_Fa_R
+-T6_mv_Ch_RL -T6_mv_No_RL
+-T6_mv_Ch_RL -T6_mv_Gr_RL
+-T6_mv_Ch_RL -T6_mv_Fx_RL
+-T6_mv_Ch_RL T7_Ch_L
+-T6_mv_Ch_RL T7_Fa_L
+
+
+-T6_mv_Fx_RL T6_Fx_R
+-T6_mv_Fx_RL T6_Fa_R
+-T6_mv_Fx_RL -T6_mv_Gr_RL
+-T6_mv_Fx_RL -T6_mv_Ch_RL
+-T6_mv_Fx_RL -T6_mv_No_RL
+-T6_mv_Fx_RL T7_Fx_L
+-T6_mv_Fx_RL T7_Fa_L
+
+-T6_Fx_L  T7_Fx_L  T6_mv_Fx_LR
+-T6_Fx_R  T7_Fx_R  T6_mv_Fx_RL
+-T6_Ch_L  T7_Ch_L  T6_mv_Ch_LR
+-T6_Ch_R  T7_Ch_R  T6_mv_Ch_RL
+-T6_Gr_L  T7_Gr_L  T6_mv_Gr_LR
+-T6_Gr_R  T7_Gr_R  T6_mv_Gr_RL
+
+# Move Every Time slot(T6)
+-T6_Fa_L T6_mv_Fx_LR T6_mv_Ch_LR T6_mv_Gr_LR T6_mv_No_LR
+-T6_Fa_R T6_mv_Fx_RL T6_mv_Ch_RL T6_mv_Gr_RL T6_mv_No_RL T6_Fx_R
+-T6_Fa_R T6_mv_Fx_RL T6_mv_Ch_RL T6_mv_Gr_RL T6_mv_No_RL T6_Ch_R
+-T6_Fa_R T6_mv_Fx_RL T6_mv_Ch_RL T6_mv_Gr_RL T6_mv_No_RL T6_Gr_R
+
+# Goal (T7)
+T7_Fa_R
+T7_Fx_R
+T7_Gr_R
+T7_Ch_R
+
+#Game Rule Logic
+-T7_Gr_L -T7_Ch_L T7_Fa_L
+-T7_Gr_R -T7_Ch_R T7_Fa_R
+-T7_Ch_L -T7_Fx_L T7_Fa_L
+-T7_Ch_R -T7_Fx_R T7_Fa_R
+
+
+-T7_Fa_L -T7_Fa_R
+T7_Fa_L T7_Fa_R
+-T7_Fx_L -T7_Fx_R
+T7_Fx_L T7_Fx_R
+-T7_Ch_L -T7_Ch_R
+T7_Ch_L T7_Ch_R
+-T7_Gr_L -T7_Gr_R
+T7_Gr_L T7_Gr_R
+
+
+

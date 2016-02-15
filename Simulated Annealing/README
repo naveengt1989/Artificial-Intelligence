@@ -1,0 +1,14 @@
+
+Goal: Use Simulated Annealing to solve Travelling salesman problem for tour of Texas.
+
+Compilation:
+	g++ simulAnneal.cpp <FLAGS>
+	Compilation Flags:
+	-DDEBUG		-	Detailed prints	
+Execution:
+	./a.out 
+
+	Output:
+	By default, following output is generated: Number of iterations, Best Tour Length found, List of cities in the best tour.
+	For detailed information regarding temperature schedule, iterations, update of tour length etc compile with DEBUG flag
+	* For plot refer: TourLength-Iterations.png

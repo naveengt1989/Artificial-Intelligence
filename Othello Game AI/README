@@ -1,0 +1,33 @@
+
+Goal: Othello competition using Minimax search, AlphaBeta Pruning(+ board eval function)
+
+Compilation:
+	g++ <FLAGS> othello.cpp 
+	Compilation Flags:
+	-DDEBUG		-	Run algorithm with additional prints with regard to cells being considered for next move.
+	Example: g++  -DDEBUG othello.cpp 
+
+Execution:
+	./a.out <SIZE_OF_BOARD> <COLOR_CONTROLLED_BY_PROGRAM> <SEARCH_DEPTH_LIMIT> 
+	Example: ./a.out 6 B 8
+
+	Input Commands:
+	Note: Commented output of the program with be preceded by the # symbol. General output syntax is as mentioned in problem statement.
+	Also, input commands are case sensitive. Command names should be in lower case and color should be in upper case.
+
+	"init" :  To be given at the start of program inorder to initialize board with center 4 cells.
+
+	"put <Color> <Row_No> <Column_No>"  : Sets the cell specified as color specified and performs flipping and outputs resultant  
+		board(commented). If move is invalid, prints: "# ERROR Invalid Move!!". Example: put B 1 2
+  
+	"move <Color>"  :  Runs Min-Max algorithm with alpha-beta pruning to find next move for color specified. Outputs the move made 
+		in the format: (<Row_no>, <Column_no>). If no move available, prints: "forfeit". Also outputs the resultant board(commented). 		     Example: move B  ==> (3,2).
+
+	"reset"  :  Reset board to initial default configuration.
+
+	"print"  :  Print Board along with heuristic values.
+
+	"quit"   :  Stop Execution and quit program.
+	
+	Output:
+	In case input command is not recognized, following is printed: "# Invalid option Entered!!". 

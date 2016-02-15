@@ -1,0 +1,15 @@
+
+Goal: Backtracking search with MRV heuristics to solve constraint satisfaction problem(CSP). 
+
+Compilation:
+	g++ <FLAGS> cspBackTrack.cpp 
+	Compilation Flags:
+	-DMRV		-	Run algorithm with MRV Heuristics	
+	-DPROB1		-	Run algorithm for Problem 1
+	-DPROB2		-	Run algorithm for Problem 2
+	Example: g++  -DMRV -DPROB2 cspBackTrack.cpp 
+Execution:
+	./a.out 
+
+	Output:
+	By default, following output is generated: Problem Solution, Number of iterations.

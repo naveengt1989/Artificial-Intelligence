@@ -1,0 +1,20 @@
+
+Goal: Implement & compare performance graph search algorithms(BFS,DFS,GBFS) on given navigation problem i.e. path finding.
+
+Compilation:
+	g++ trackPath.cpp <FLAGS>
+	Compilation flags can be the following:
+	<FLAGS>
+	-DBFS ==> compile enabling bfs searching algorithm
+	-DDFS ==> compile enabling dfs searching algorithm
+	-DGBFS ==> compile enabling gbfs searching algorithm
+	-DDEBUG ==> compile in debug mode. Gives detailed print traces
+
+Execution:
+	./a.out <Input File> <Src-X Co-ordinate> <Src-Y Co-ordinate> <Destination-X Co-ordinate> <Destination-Y Co-ordinate>
+	Example:
+	./a.out ATM.graph 1 20 20 1 
+
+	Output:
+	By default, solution path of each search algorithm selected and summary statistics are printed. Additional prints are output in debug mode.
+
